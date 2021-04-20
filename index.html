@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/nuevoStyle.css">
+    <title>Chambuchito</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-success navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="./img/logo.png" alt="logo">
+        </a>
+    </nav>
+    <div class="row d-flex justify-content-around mb-3">
+        <div class="col-xl-4 col-lg-4 col-md-11 col-sl-11 bg-info m-3">
+            <h2 class="text-center">Realice su Pedido</h2>
+            <form action="">
+                <select id="inputPan" name="pan" class="custom-select my-2">
+                    <option selected>Seleccione el tipo de PAN</option>
+                    <option value="blanco">Pan Blanco</option>
+                    <option value="integral" disabled>Pan Integral (No disponible)</option>
+                </select>
+                <select id="inputProteina" name="proteina" class="custom-select my-2">
+                    <option selected>Seleccione el tipo de PROTEÍNA</option>
+                    <option value="carne">Carne Vacuna</option>
+                    <option value="pollo">Pollo</option>
+                    <option value="pescado" disabled>Pescado(No disponible)</option>
+                </select>
+                <label for="vegetales">Seleccione 3 vegetales:</label>
+                <div class="input-group mb-3">
+                    <select id="inputVegetales" name="vegetales" class="custom-select">
+                        <option selected>Seleccione los vegetales</option>
+                        <option value="lechuga">Lechuga</option>
+                        <option value="tomate">Tomate</option>
+                        <option value="zanahoria" disabled>Zanahoria (No disponible)</option>
+                        <option value="cebolla">Cebolla</option>
+                        <option value="pepinillos">Pepinillos</option>
+                    </select>
+                    <div class="input-group-append">
+                        <button id="botonAgregarVegetales" class="btn btn-success" type="button">Agregar</button>  
+                    </div>
+                </div>
+                <div id="divVegetalesSeleccionados">
+
+                </div>
+                <label for="deseaQueso">¿Desea Agregar Queso a su Sandwich?</label><br>
+                <div class="form-check-inline">
+                    <label class="form-check-label" for="radio1">
+                      <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked > Si
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <label class="form-check-label" for="radio2">
+                        <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2"> No
+                    </label>
+                </div>
+                <br>
+                <div class="d-flex justify-content-around my-3">
+                    <button type="reset" class="btn btn-outline-danger px-2">Borrar</button>
+                    <button id="botonFinalizar" type="button" class="btn btn-outline-warning px-2">Confirmar Pedido</button>
+                </div>
+            </form>
+        </div>
+        <div id="cajaImgSandwich" class="col-xl-6 col-lg-6 col-md-11 col-sl-11 m-3 d-flex justify-content-center">
+            <img id="imgPan"> <!-- src="./img/panBlanco1.png" -->
+            <img id="imgProteina">  <!-- src="./img/carne.png" -->
+        </div>
+    </div>
+</body>
+<script src="js/objetos.js"></script>
+<script src="js/pan.js"></script>
+<script src="js/proteina.js"></script>
+<script src="js/vegetales.js"></script>
+<script src="js/finalizarCompra.js"></script>
+</html>
