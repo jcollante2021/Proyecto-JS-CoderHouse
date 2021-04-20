@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin-top: 130px;
+    background-color: black;
+}
+
+#cajaImgSandwich{
+    background-image: url(../img/fondo_madera.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    width: 100vw;
+    height: 500px;
+}
+
+#imgPan{
+    z-index: 1;
+    position: absolute;
+    bottom: 50px;
+    left: 220px;
+}
+
+#imgProteina{
+    z-index: 2;
+    position: absolute;
+    bottom: 70px;
+    left: 220px;
+}
+
