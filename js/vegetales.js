@@ -6,55 +6,55 @@ let cssTopVegetales = 70
 let zIndex = 2
 
 function agregarVegetales(){
-    let vegetales = document.getElementById("inputVegetales").value;
+    vegetales = document.getElementById("inputVegetales").value;
     if (arrayVegetales.length < 3){
         switch(vegetales){
             case "lechuga": 
                 lechuga.agregarPrecio();
-                arrayIngredientes.push("-Lechuga ($" + lechuga.precio + ")");
+                arrayIngredientes.push("Lechuga ($" + lechuga.precio + ")");
                 let agregaLechuga = document.createElement("img");
                 agregaLechuga.src="./img/lechuga.png";
-                agregaLechuga.setAttribute("style", `z-index: ${zIndex++}; position: absolute; bottom: ${cssTopVegetales+20}px; left: 220px`);
+                agregaLechuga.setAttribute("style", `z-index: ${zIndex++}; position: absolute; bottom: ${cssTopVegetales+20}px; left: 200px; width: 350px;`);
                 contenedorVegetales.appendChild(agregaLechuga);
                 document.getElementById("divVegetalesSeleccionados").innerHTML += `<button class="btn btn-warning mx-1">Lechuga</button>`;
                 arrayVegetales.push(vegetales)
                 break;
             case "tomate":
                 tomate.agregarPrecio();
-                arrayIngredientes.push("-Tomate ($" + tomate.precio + ")")
+                arrayIngredientes.push("Tomate ($" + tomate.precio + ")")
                 let agregaTomate = document.createElement("img");
                 agregaTomate.src="./img/tomate.png";
-                agregaTomate.setAttribute("style", `z-index: ${zIndex++}; position: absolute; bottom: ${cssTopVegetales+20}px; left: 220px`);
+                agregaTomate.setAttribute("style", `z-index: ${zIndex++}; position: absolute; bottom: ${cssTopVegetales+20}px; left: 200px; width: 350px;`);
                 contenedorVegetales.appendChild(agregaTomate);
                 document.getElementById("divVegetalesSeleccionados").innerHTML += `<button class="btn btn-warning mx-1">Tomate</button>`;
                 arrayVegetales.push(vegetales)
                 break;
             case "zanahoria":
                 zanahoria.agregarPrecio();
-                arrayIngredientes.push("-Zanahoria ($" + zanahoria.precio + ")")
+                arrayIngredientes.push("Zanahoria ($" + zanahoria.precio + ")")
                 let agregaZanahoria = document.createElement("img");
                 agregaZanahoria.src="./img/zanahoria.png";
-                agregaZanahoria.setAttribute("style", `z-index: ${zIndex++}; position: absolute; bottom: ${cssTopVegetales+20}px; left: 220px`);
+                agregaZanahoria.setAttribute("style", `z-index: ${zIndex++}; position: absolute; bottom: ${cssTopVegetales+20}px; left: 200px; width: 350px;`);
                 contenedorVegetales.appendChild(agregaZanahoria);
                 document.getElementById("divVegetalesSeleccionados").innerHTML += `<button class="btn btn-warning mx-1">Zanahoria</button>`;
                 arrayVegetales.push(vegetales)
                 break;
             case "cebolla":
                 cebolla.agregarPrecio();
-                arrayIngredientes.push("-Cebolla ($" + cebolla.precio + ")")
+                arrayIngredientes.push("Cebolla ($" + cebolla.precio + ")")
                 let agregaCebolla = document.createElement("img");
                 agregaCebolla.src="./img/cebolla.png";
-                agregaCebolla.setAttribute("style", `z-index: ${zIndex++}; position: absolute; bottom: ${cssTopVegetales+20}px; left: 220px`);
+                agregaCebolla.setAttribute("style", `z-index: ${zIndex++}; position: absolute; bottom: ${cssTopVegetales+20}px; left: 200px; width: 350px;`);
                 contenedorVegetales.appendChild(agregaCebolla);
                 document.getElementById("divVegetalesSeleccionados").innerHTML += `<button class="btn btn-warning mx-1">Cebolla</button>`;
                 arrayVegetales.push(vegetales)
                 break;
             case "pepinillos":
                 pepinillos.agregarPrecio();
-                arrayIngredientes.push("-Pepinillos ($" + pepinillos.precio + ")")
+                arrayIngredientes.push("Pepinillos ($" + pepinillos.precio + ")")
                 let agregaPepinillos = document.createElement("img");
                 agregaPepinillos.src="./img/pepinillos.png";
-                agregaPepinillos.setAttribute("style", `z-index: ${zIndex++}; position: absolute; bottom: ${cssTopVegetales+20}px; left: 220px`);
+                agregaPepinillos.setAttribute("style", `z-index: ${zIndex++}; position: absolute; bottom: ${cssTopVegetales+20}px; left: 200px; width: 350px;`);
                 contenedorVegetales.appendChild(agregaPepinillos);
                 document.getElementById("divVegetalesSeleccionados").innerHTML += `<button class="btn btn-warning mx-1">Pepinillos</button>`;
                 arrayVegetales.push(vegetales)

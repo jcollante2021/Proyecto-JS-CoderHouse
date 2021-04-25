@@ -27,6 +27,10 @@ body{
     margin-top: 130px;
 }
 
+#divSeleccionIngredientes{
+    background-color: #66006e;
+}
+
 #cajaImgSandwich{
     background-image: url(../img/fondo_madera.jpg);
     background-repeat: no-repeat;
@@ -37,17 +41,19 @@ body{
 }
 
 #imgPan{
+    width: 350px;
     z-index: 1;
     position: absolute;
     bottom: 50px;
-    left: 220px;
+    left: 200px;
 }
 
 #imgProteina{
+    width: 350px;
     z-index: 2;
     position: absolute;
     bottom: 70px;
-    left: 220px;
+    left: 200px;
 }
 
 .overlay{
@@ -92,6 +98,32 @@ body{
     font-size: 20pt;
 }
 
+
+#divDetalledePedido{
+    text-align: center;
+    visibility: hidden;
+}
+
+#tituloDetalle, #tituloPedido{
+    color: #fe8500;
+    font-family: "subway", serif;
+    font-size: 40pt;
+}
+
+#formDetalle, #formPedido{
+    margin: 30px 0 30px 0;
+    color: #fec400;
+    font-size: 16pt;
+}
+
+li{
+    list-style: none;
+}
+
 .activo{
     visibility: visible;
+}
+
+.desactivado{
+    display: none;
 }
