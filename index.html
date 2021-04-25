@@ -9,14 +9,23 @@
     <title>Chambuchito</title>
 </head>
 <body>
+    <div id="overlay" class="overlay">
+        <div id="divOverlay">
+            <h1>Bienvenido</h2>
+            <h3>Ingresa tu Nombre</h3>
+            <input id="inputNombre" class="form-control form-control-lg" type="text" placeholder="Tu Nombre">
+            <button id="botonConfirmar" class="btn btn-outline-success btn-lg">Confirmar</button>
+        </div>
+    </div>
     <nav class="navbar navbar-expand-sm bg-success navbar-dark fixed-top">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand flex-grow-1" href="#">
             <img src="./img/logo.png" alt="logo">
         </a>
+        <p id="tituloPersonalizado">¡Hola <span id="nombrePersonlizado"></span>! ¿Que vas a pedir Hoy?</p>
     </nav>
-    <div class="row d-flex justify-content-around mb-3">
-        <div class="col-xl-4 col-lg-4 col-md-11 col-sl-11 bg-info m-3">
-            <h2 class="text-center">Realice su Pedido</h2>
+    <div id="contenido" class="row d-flex justify-content-around mb-3">
+        <div id="divSeleccionIngredientes" class="col-xl-4 col-lg-4 col-md-11 col-sl-11 bg-info m-3">
+            <h2 class="text-center my-3">Realice su Pedido</h2>
             <form action="">
                 <select id="inputPan" name="pan" class="custom-select my-2">
                     <option selected>Seleccione el tipo de PAN</option>
@@ -69,7 +78,9 @@
             <img id="imgProteina">  <!-- src="./img/carne.png" -->
         </div>
     </div>
+
 </body>
+<script src="js/popup.js"></script>
 <script src="js/objetos.js"></script>
 <script src="js/pan.js"></script>
 <script src="js/proteina.js"></script>
