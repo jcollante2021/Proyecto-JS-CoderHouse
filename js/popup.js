@@ -1,22 +1,22 @@
-window.onload = verificar()
+$(document).ready(verificar)
 
 function verificar(){
     let usuario = sessionStorage.getItem("user")
     objeto = JSON.parse(usuario)
     if (objeto == null){
-        overley = document.getElementById("overlay");
-        overley.classList.add("activo");
-        document.getElementById("botonConfirmar").addEventListener("click", agregarNombre)
+        overley = $("#overlay");
+        overley.addClass("activo");
+        $("#botonConfirmar").click(agregarNombre);
         function agregarNombre(){
-            inputNombre = document.getElementById("inputNombre").value;
-            document.getElementById("nombrePersonlizado").innerHTML += `${inputNombre}`
+            inputNombre = $("#inputNombre").val();
+            $("#nombrePersonlizado").text(`${inputNombre}`)
             objeto = inputNombre
-            overley.classList.remove("activo")
+            overley.removeClass("activo")
             myJSON = JSON.stringify(objeto)
             sessionStorage.setItem("user", myJSON)
         }   
     }
     else{
-        document.getElementById("nombrePersonlizado").innerHTML += `${objeto}`
+        $("#nombrePersonlizado").text(`${objeto}`)
     }
 }
