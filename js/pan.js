@@ -1,12 +1,12 @@
-document.getElementById("inputPan").addEventListener("change", agregarPan);
+$("#inputPan").change(agregarPan)
 
 function agregarPan(){
-    pan = document.getElementById("inputPan").value;
+    pan = $("#inputPan").val();
     switch(pan){
         case "blanco": 
             panBlanco.agregarPrecio();
             arrayIngredientes.push("Pan Blanco ($" + panBlanco.precio + ")")
-            document.getElementById("imgPan").src="./img/panBlanco1.png"
+            $('#imgPan').attr("src", "./img/panBlanco1.png");
             break;
         case "integral":
             panIntegral.agregarPrecio();
@@ -15,6 +15,7 @@ function agregarPan(){
         default:
             panBlanco.agregarPrecio();
             arrayIngredientes.push("Pan Blanco ($" + panBlanco.precio + ")")
+            $('#imgPan').attr("src", "./img/panBlanco1.png");
             break;
     }
 }

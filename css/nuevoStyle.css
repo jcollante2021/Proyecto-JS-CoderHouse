@@ -34,26 +34,29 @@ body{
 #cajaImgSandwich{
     background-image: url(../img/fondo_madera.jpg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-size: cover;
     position: relative;
     width: 100vw;
-    height: 500px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #imgPan{
-    width: 350px;
     z-index: 1;
-    position: absolute;
     bottom: 50px;
-    left: 200px;
 }
 
 #imgProteina{
-    width: 350px;
     z-index: 2;
-    position: absolute;
     bottom: 70px;
-    left: 200px;
+}
+
+#cajaImgSandwich img {
+    width: 350px;
+    /* left: 300px; */
+    position: absolute;
 }
 
 .overlay{
@@ -126,4 +129,13 @@ li{
 
 .desactivado{
     display: none;
+}
+
+@media screen and (max-width: 576px) {
+    #cajaImgSandwich {
+        height: 400px;
+    }
+    nav a img {
+        width: 350px;
+    }
 }

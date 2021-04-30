@@ -1,26 +1,28 @@
-document.getElementById("inputProteina").addEventListener("change", agregarProteina);
+$("#inputProteina").change(agregarProteina);
+proteina = "Vegetales";
 
 function agregarProteina(){
-    proteina = document.getElementById("inputProteina").value;
+    proteina = $("#inputProteina").val();
     switch(proteina){
         case "carne": 
             carne.agregarPrecio();
-            arrayIngredientes.push("Carne ($" + carne.precio + ")")
-            document.getElementById("imgProteina").src="./img/carne.png"
+            arrayIngredientes.push("Carne ($" + carne.precio + ")");
+            $("#imgProteina").attr("src", "./img/carne.png");
             break;
         case "pollo":
             pollo.agregarPrecio();
-            arrayIngredientes.push("Pollo ($" + pollo.precio + ")")
-            document.getElementById("imgProteina").src="./img/pollo.png"
+            arrayIngredientes.push("Pollo ($" + pollo.precio + ")");
+            $("#imgProteina").attr("src", "./img/pollo.png");
             break;
         case "pescado":
             pescado.agregarPrecio();
-            arrayIngredientes.push("Pescado ($" + pescado.precio + ")")
-            document.getElementById("imgProteina").src="./img/pescado.png"
+            arrayIngredientes.push("Pescado ($" + pescado.precio + ")");
+            $("#imgProteina").attr("src", "./img/pescado.png");
             break;
         default:
             carne.agregarPrecio();
-            arrayIngredientes.push("Carne ($" + carne.precio + ")")
+            arrayIngredientes.push("Carne ($" + carne.precio + ")");
+            $("#imgProteina").attr("src", "./img/carne.png");
             break;
     }
 }
