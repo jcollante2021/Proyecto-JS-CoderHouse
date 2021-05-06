@@ -6,7 +6,7 @@ function agregarPan(){
         case "blanco": 
             panBlanco.agregarPrecio();
             arrayIngredientes.push("Pan Blanco ($" + panBlanco.precio + ")")
-            $('#imgPan').attr("src", "./img/panBlanco1.png");
+            $("#cajaImgSandwich").prepend(`<img id="imgPan" src="./img/panBlanco1.png">`);
             break;
         case "integral":
             panIntegral.agregarPrecio();
@@ -15,7 +15,7 @@ function agregarPan(){
         default:
             panBlanco.agregarPrecio();
             arrayIngredientes.push("Pan Blanco ($" + panBlanco.precio + ")")
-            $('#imgPan').attr("src", "./img/panBlanco1.png");
+            $("#cajaImgSandwich").prepend(`<img id="imgPan" src="./img/panBlanco1.png">`);
             break;
     }
 }

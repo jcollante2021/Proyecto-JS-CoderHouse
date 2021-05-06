@@ -37,7 +37,7 @@ body{
     background-size: cover;
     position: relative;
     width: 100vw;
-    height: 700px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,7 +55,6 @@ body{
 
 #cajaImgSandwich img {
     width: 350px;
-    /* left: 300px; */
     position: absolute;
 }
 
@@ -138,4 +137,24 @@ li{
     nav a img {
         width: 350px;
     }
+}
+
+/* ANIMACIONES */
+
+#cajaImgSandwich img{
+    animation-name: animaIngredientes;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s; 
+}
+
+@keyframes animaIngredientes {
+    0% {
+        opacity: 0;
+        transform: translateY(-300px);
+    }
+    100% {
+        opacity: 1;
+
+    } 
 }
