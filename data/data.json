@@ -1,0 +1,47 @@
+[
+    {
+        "nombre": "blanco",
+        "precio": 50
+    },
+    {
+        "nombre": "integral",
+        "precio": 80
+    },
+    {
+        "nombre": "carne",
+        "precio": 120
+    },
+    {
+        "nombre": "pollo",
+        "precio": 120
+    },
+    {
+        "nombre": "pescado",
+        "precio": 200
+    },
+    {
+        "nombre": "queso",
+        "precio": 50
+    },
+    {
+        "nombre": "lechuga",
+        "precio": 15
+    },
+    {
+        "nombre": "tomate",
+        "precio": 25
+    },
+    {
+        "nombre": "cebolla",
+        "precio": 15
+    },
+    {
+        "nombre": "zanahoria",
+        "precio": 10
+    },
+    {
+        "nombre": "pepinillos",
+        "precio": 20
+    }
+
+]
