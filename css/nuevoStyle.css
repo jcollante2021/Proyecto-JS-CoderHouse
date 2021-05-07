@@ -17,7 +17,7 @@ body{
     font-size: 13pt;
 }
 
-#nombrePersonlizado{
+#nombrePersonalizado{
     color: #fe8500;
     font-family: "subway", serif;
     font-size: 18pt;
@@ -69,6 +69,17 @@ body{
     visibility: hidden;
 }
 
+#overlayPrecios{
+    z-index: 16;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+}
+
 #divOverlay{
     margin-top: 100px;
     border-radius: 20px;
@@ -80,7 +91,7 @@ body{
     top: 400px;
 }
 
-#divOverlay h1{
+#divOverlay h2{
     color: #fec400;
     font-family: "subway", serif;
     font-size: 50pt;
@@ -90,8 +101,60 @@ body{
     color: #fec400;
 }
 
+#divListaDePrecios{
+    margin-top: 100px;
+    border-radius: 20px;
+    text-align: center;
+    width: 490px;
+    height: 450px;
+    background-color: #66006e;
+    padding: 20px;
+    top: 400px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#divListaDePrecios h2{
+    color: #fec400;
+    font-family: "subway", serif;
+    font-size: 40pt;
+}
+
+#btnSalirPrecios{
+    padding: 8px;
+    width: 80%;
+    margin: 10px;
+    background-color: red;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 16pt;
+}
+
+#btnSalirPrecios:hover{
+    background-color: rgba(255, 0, 0, 0.719);
+    cursor: pointer;
+}
+
 #botonConfirmar{
     margin: 20px 0 15px 0;
+}
+
+#btnListaDePrecios{
+    padding: 10px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 12pt;
+    color: white;
+    background-color: teal;
+}
+
+#btnListaDePrecios:hover{
+    background-color: rgba(0, 128, 128, 0.726);
+    cursor: pointer;
 }
 
 #inputNombre{

@@ -1,46 +1,46 @@
 [
     {
-        "nombre": "blanco",
+        "nombre": "Pan Blanco",
         "precio": 50
     },
     {
-        "nombre": "integral",
+        "nombre": "Pan Integral",
         "precio": 80
     },
     {
-        "nombre": "carne",
+        "nombre": "Carne Vacuna",
         "precio": 120
     },
     {
-        "nombre": "pollo",
+        "nombre": "Pollo",
         "precio": 120
     },
     {
-        "nombre": "pescado",
+        "nombre": "Pescado",
         "precio": 200
     },
     {
-        "nombre": "queso",
+        "nombre": "Queso Cheddar",
         "precio": 50
     },
     {
-        "nombre": "lechuga",
+        "nombre": "Lechuga",
         "precio": 15
     },
     {
-        "nombre": "tomate",
+        "nombre": "Tomate",
         "precio": 25
     },
     {
-        "nombre": "cebolla",
+        "nombre": "Cebolla",
         "precio": 15
     },
     {
-        "nombre": "zanahoria",
+        "nombre": "Zanahoria",
         "precio": 10
     },
     {
-        "nombre": "pepinillos",
+        "nombre": "Pepinillos",
         "precio": 20
     }
 

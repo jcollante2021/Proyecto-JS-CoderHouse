@@ -9,7 +9,7 @@ function verificar(){
         $("#botonConfirmar").click(agregarNombre);
         function agregarNombre(){
             inputNombre = $("#inputNombre").val();
-            $("#nombrePersonlizado").text(`${inputNombre}`)
+            $("#nombrePersonalizado").text(`${inputNombre}`)
             objeto = inputNombre
             overley.removeClass("activo")
             myJSON = JSON.stringify(objeto)
@@ -17,6 +17,6 @@ function verificar(){
         }   
     }
     else{
-        $("#nombrePersonlizado").text(`${objeto}`)
+        $("#nombrePersonalizado").text(`${objeto}`)
     }
 }

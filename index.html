@@ -12,19 +12,24 @@
 <body>
     <div id="overlay" class="overlay">
         <div id="divOverlay">
-            <h1>Bienvenido</h2>
+            <h2>Bienvenido</h2>
             <h3>Ingresa tu Nombre</h3>
             <form action="">
                 <input id="inputNombre" class="form-control form-control-lg" type="text" placeholder="Tu Nombre">
-                <button type="submit" id="botonConfirmar" class="btn btn-outline-success btn-lg">Confirmar</button>
+                <button type="submit" id="botonConfirmar" class="btn btn-success btn-lg">Confirmar</button>
             </form>
+        </div>
+    </div>
+    <div id="overlayPrecios" class="overlayPrecios">
+        <div id="divListaDePrecios">
+            <h2>ListA de PrecioS</h2>
         </div>
     </div>
     <nav class="navbar navbar-expand-sm bg-success navbar-dark fixed-top">
         <a class="navbar-brand flex-grow-1" href="#">
             <img src="./img/logo.png" alt="logo">
         </a>
-        <p id="tituloPersonalizado">¡Hola <span id="nombrePersonlizado"></span>! ¿Que vas a pedir Hoy?</p>
+        <p id="tituloPersonalizado">¡Hola <span id="nombrePersonalizado"></span>! ¿Que vas a pedir Hoy?</p>
     </nav>
     <div id="contenido" class="row d-flex justify-content-around mb-3">
         <div id="divSeleccionIngredientes" class="col-xl-4 col-lg-4 col-md-11 col-sl-11 m-3">
@@ -74,6 +79,7 @@
                     <button type="reset" class="btn btn-outline-danger px-2">Borrar</button>
                     <button id="botonFinalizar" type="button" class="btn btn-outline-warning px-2">Confirmar Pedido</button>
                 </div>
+                <div id="btnListaDePrecios">Lista de Precios</div>
             </form>
             <div id="divDetalledePedido">
                 <h2 id="tituloDetalle" class="text-center my-3">Detalle del Pedido</h2>
@@ -91,6 +97,7 @@
 
 </body>
 <script src="js/popup.js"></script>
+<script src="js/AJAX.js"></script>
 <script src="js/objetos.js"></script>
 <script src="js/pan.js"></script>
 <script src="js/proteina.js"></script>
