@@ -138,6 +138,12 @@ body{
     cursor: pointer;
 }
 
+#estiloParaBotonPrecio{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 #botonConfirmar{
     margin: 20px 0 15px 0;
 }
