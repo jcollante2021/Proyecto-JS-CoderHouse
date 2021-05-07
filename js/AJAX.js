@@ -3,6 +3,13 @@ const URLJSON = '../data/data.json'
 $(document).ready(traerDatosJSON)
 
 function traerDatosJSON(){
+    /* $.ajax({
+        method: "GET",
+        url: URLJSON,
+        success: function (res){
+            $("#datosListadePrecios").append(`<div class="btnPrecios"><p>${res.nombre} [ $${res.precio} ]</p></div>`)
+        }
+    }) */
     $.getJSON(URLJSON, function (res, status){
         if(status === "success"){
             let misDatos = res;
