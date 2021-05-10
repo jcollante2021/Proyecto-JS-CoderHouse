@@ -1,5 +1,3 @@
-const URLJSON = '../data/data.json'
-
 $(document).ready(traerDatosJSON)
 
 function traerDatosJSON(){
@@ -10,7 +8,7 @@ function traerDatosJSON(){
             $("#datosListadePrecios").append(`<div class="btnPrecios"><p>${res.nombre} [ $${res.precio} ]</p></div>`)
         }
     }) */
-    $.getJSON(URLJSON, function (res, status){
+    $.getJSON("../data/data.json", function (res, status){
         if(status === "success"){
             let misDatos = res;
             for (const dato of misDatos){
