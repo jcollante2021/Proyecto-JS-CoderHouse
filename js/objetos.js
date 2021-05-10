@@ -1,4 +1,4 @@
-let precioTotal = 0;
+precioTotal = 0;
 
 class Producto{
     constructor (nombre, precio) {
@@ -21,7 +21,7 @@ const tomate = new Producto("tomate", 25);
 const zanahoria = new Producto("zanahoria", 15);
 const cebolla = new Producto("cebolla", 10);
 const pepinillos = new Producto("pepinillos", 20);
-const arrayIngredientes = [];
+arrayIngredientes = [];
 
 
 

@@ -15,8 +15,8 @@
             <h2>Bienvenido</h2>
             <h3>Ingresa tu Nombre</h3>
             <form action="">
-                <input id="inputNombre" class="form-control form-control-lg" type="text" placeholder="Tu Nombre">
-                <button type="submit" id="botonConfirmar" class="btn btn-success btn-lg">Confirmar</button>
+                <input id="inputNombre" type="text" placeholder="Tu Nombre">
+                <button type="submit" id="botonConfirmar">Confirmar</button>
             </form>
         </div>
     </div>
@@ -30,10 +30,8 @@
             </div>
         </div>  
     </div>
-    <nav class="navbar navbar-expand-sm bg-success navbar-dark fixed-top">
-        <a class="navbar-brand flex-grow-1" href="#">
+    <nav class="navbar">
             <img src="./img/logo.png" alt="logo">
-        </a>
         <p id="tituloPersonalizado">¡Hola <span id="nombrePersonalizado"></span>! ¿Que vas a pedir Hoy?</p>
     </nav>
     <div id="contenido" class="row d-flex justify-content-around mb-3">
@@ -51,6 +49,7 @@
                     <option value="pollo">Pollo</option>
                     <option value="pescado" disabled>Pescado(No disponible)</option>
                 </select>
+                <div id="btnAgregarQueso" class="btnAgregarQueso">Click aquí para Agregar Queso Cheddar</div>
                 <label for="vegetales">Seleccione 3 vegetales:</label>
                 <div class="input-group mb-3">
                     <select id="inputVegetales" name="vegetales" class="custom-select">
@@ -68,21 +67,9 @@
                 <div id="divVegetalesSeleccionados">
 
                 </div>
-                <label for="deseaQueso">¿Desea Agregar Queso a su Sandwich?</label><br>
-                <div class="form-check-inline">
-                    <label class="form-check-label" for="radio1">
-                      <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked > Si
-                    </label>
-                </div>
-                <div class="form-check-inline">
-                    <label class="form-check-label" for="radio2">
-                        <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2"> No
-                    </label>
-                </div>
-                <br>
                 <div class="d-flex justify-content-around my-3">
-                    <button type="reset" class="btn btn-outline-danger px-2">Borrar</button>
-                    <button id="botonFinalizar" type="button" class="btn btn-outline-warning px-2">Confirmar Pedido</button>
+                    <button id="btnBorrarPedido" type="reset" class="btn btn-outline-danger px-2">Eliminar Todo</button>
+                    <button id="botonFinalizar" type="button" class="btn btn-outline-warning px-2">Continuar Pedido</button>
                 </div>
                 <div id="btnListaDePrecios">Lista de Precios</div>
             </form>

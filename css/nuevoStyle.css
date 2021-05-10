@@ -2,26 +2,195 @@
     margin: 0;
     padding: 0;
 }
-
 @font-face {
     font-family: "subway";
     src: url(../font/subway.ttf);
 }
-
 body{
+    padding: 0 15px 0 0px;
+    width: 100%;
     background-color: black;
 }
-
+/* /////////////////////////
+////////NAV FIXED////////
+///////////////////////// */
+.navbar{
+    width: 100%;
+    height: 100px;
+    background-color: #009201;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
 #tituloPersonalizado{
     color: #fec400;
     font-size: 13pt;
 }
-
 #nombrePersonalizado{
     color: #fe8500;
     font-family: "subway", serif;
     font-size: 18pt;
 }
+
+/* ///////////////////////////// */
+
+/* ///////////////////////////////////////////
+////////OVERLAYS PARA LOGIN Y PRECIOS////////
+//////////////////////////////////////////// */
+
+.overlay{
+    z-index: 15;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 100px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+}
+#divOverlay{
+    margin-top: 100px;
+    border-radius: 20px;
+    text-align: center;
+    width: 400px;
+    height: 280px;
+    background-color: #66006e;
+    padding: 20px;
+    top: 400px;
+}
+#divOverlay h2{
+    color: #fec400;
+    font-family: "subway", serif;
+    font-size: 50pt;
+}
+#divOverlay h3{
+    color: #fec400;
+}
+#inputNombre{
+    text-align: center;
+    font-family: "subway", serif;
+    font-size: 20pt;
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+#botonConfirmar{
+    padding: 8px;
+    width: 60%;
+    margin: 10px;
+    background-color: #009201;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 16pt;
+}
+#botonConfirmar:hover{
+    background-color: #00611c;
+    cursor: pointer;
+}
+/* /////////////////////////////
+/////////////////////////////// */
+
+#overlayPrecios{
+    z-index: 16;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+}
+#divListaDePrecios{
+    margin-top: 100px;
+    border-radius: 20px;
+    text-align: center;
+    width: 490px;
+    height: 450px;
+    background-color: #66006e;
+    padding: 20px;
+    top: 400px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#divListaDePrecios h2{
+    color: #fec400;
+    font-family: "subway", serif;
+    font-size: 40pt;
+}
+#btnSalirPrecios{
+    padding: 8px;
+    width: 80%;
+    margin: 10px;
+    background-color: red;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 16pt;
+}
+#btnSalirPrecios:hover{
+    background-color: rgba(255, 0, 0, 0.719);
+    cursor: pointer;
+}
+#estiloParaBotonPrecio{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#btnListaDePrecios{
+    padding: 10px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 12pt;
+    color: white;
+    background-color: teal;
+    border-radius: 20px;
+}
+#btnListaDePrecios:hover{
+    background-color: rgba(0, 128, 128, 0.726);
+    cursor: pointer;
+}
+/* ///////////////////////////// */
+
+.btnAgregarQueso{
+    padding: 10px;
+    margin: 10px;
+    background-color: #fec400;
+    border-radius: 15px;
+    border: none;
+    color: black;
+    font-size: 16pt;
+    text-align: center;
+}
+
+.probandoHoverEnJQuery{
+    background-color: red;
+    color: white;
+}
+.eliminarVegetal:hover{
+    background-color: red;
+    color: white;
+    transition: 1s;
+}
+
+.btnAgregarQueso:hover{
+    background-color: #fec300cb;
+    cursor: pointer;
+}
+
+
+
 
 #contenido{
     margin-top: 130px;
@@ -29,6 +198,7 @@ body{
 
 #divSeleccionIngredientes{
     background-color: #66006e;
+    border-radius: 25px;
 }
 
 #cajaImgSandwich{
@@ -58,116 +228,7 @@ body{
     position: absolute;
 }
 
-.overlay{
-    z-index: 15;
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    visibility: hidden;
-}
 
-#overlayPrecios{
-    z-index: 16;
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    visibility: hidden;
-}
-
-#divOverlay{
-    margin-top: 100px;
-    border-radius: 20px;
-    text-align: center;
-    width: 400px;
-    height: 280px;
-    background-color: #66006e;
-    padding: 20px;
-    top: 400px;
-}
-
-#divOverlay h2{
-    color: #fec400;
-    font-family: "subway", serif;
-    font-size: 50pt;
-}
-
-#divOverlay h3{
-    color: #fec400;
-}
-
-#divListaDePrecios{
-    margin-top: 100px;
-    border-radius: 20px;
-    text-align: center;
-    width: 490px;
-    height: 450px;
-    background-color: #66006e;
-    padding: 20px;
-    top: 400px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#divListaDePrecios h2{
-    color: #fec400;
-    font-family: "subway", serif;
-    font-size: 40pt;
-}
-
-#btnSalirPrecios{
-    padding: 8px;
-    width: 80%;
-    margin: 10px;
-    background-color: red;
-    border-radius: 5px;
-    border: none;
-    color: white;
-    font-size: 16pt;
-}
-
-#btnSalirPrecios:hover{
-    background-color: rgba(255, 0, 0, 0.719);
-    cursor: pointer;
-}
-
-#estiloParaBotonPrecio{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-#botonConfirmar{
-    margin: 20px 0 15px 0;
-}
-
-#btnListaDePrecios{
-    padding: 10px;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    font-size: 12pt;
-    color: white;
-    background-color: teal;
-}
-
-#btnListaDePrecios:hover{
-    background-color: rgba(0, 128, 128, 0.726);
-    cursor: pointer;
-}
-
-#inputNombre{
-    text-align: center;
-    font-family: "subway", serif;
-    font-size: 20pt;
-}
 
 
 #divDetalledePedido{
@@ -203,8 +264,8 @@ li{
     #cajaImgSandwich {
         height: 400px;
     }
-    nav a img {
-        width: 350px;
+    .navbar img {
+        width: 300px;
     }
 }
 
