@@ -35,9 +35,16 @@
         <p id="tituloPersonalizado">¡Hola <span id="nombrePersonalizado"></span>! ¿Que vas a pedir Hoy?</p>
     </nav>
     <div id="contenido" class="row d-flex justify-content-around mb-3">
+        
         <div id="divSeleccionIngredientes" class="col-xl-4 col-lg-4 col-md-11 col-sl-11 m-3">
-            <h2 id="tituloPedido" class="text-center my-3 activo">Realice su Pedido</h2>
+            <div class="pasosFila">
+                <div id="progress"></div>
+                <div class="pasosColumna"><b>Paso 1</b></div>
+                <div class="pasosColumna"><b>Paso 2</b></div>
+                <div class="pasosColumna"><b>Paso 3</b></div>
+            </div>
             <form id="formPedido">
+                <h2 id="tituloPedido" class="text-center my-3">Realice su Pedido</h2>
                 <select id="inputPan" name="pan" class="custom-select my-2">
                     <option selected>Seleccione el tipo de PAN</option>
                     <option value="blanco">Pan Blanco</option>
@@ -69,27 +76,65 @@
                 </div>
                 <div class="d-flex justify-content-around my-3">
                     <button id="btnBorrarPedido" type="reset" class="btn btn-outline-danger px-2">Eliminar Todo</button>
-                    <button id="botonFinalizar" type="button" class="btn btn-outline-warning px-2">Continuar Pedido</button>
+                    <button id="botonContinuar1" type="button" class="btn btn-outline-warning px-2">Continuar Pedido</button>
                 </div>
-                <div id="btnListaDePrecios">Lista de Precios</div>
             </form>
-            <div id="divDetalledePedido">
+            <form id="formDatosPersonales" >
+                <h2 id="tituloDatosPersonales" class="text-center my-3">Datos Personales</h2>
+                <div class="form-group">
+                    <label for="usr">Nombre y Apellido:</label>
+                    <input type="text" id="datosPersonalesNombre" class="form-control" name="Nombre">
+                </div>
+                <div class="form-group">
+                    <label for="usr">Direccion:</label>
+                    <input type="text"id="datosPersonalesDireccion" class="form-control" name="Direccion">
+                </div>
+                <div class="form-group">
+                    <label for="usr">Localidad:</label>
+                    <input type="text" id="datosPersonalesLocalidad" class="form-control" name="Localidad">
+                </div>
+                <div class="form-check-inline">
+                    <label class="form-check-label" for="radio1">
+                      <input type="radio" class="form-check-input" id="radio1" name="optradio" value="Efectivo" checked>Efectivo
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <label class="form-check-label" for="radio2">
+                      <input type="radio" class="form-check-input" id="radio2" name="optradio" value="Mercado Pago">Mercado Pago
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" id="radio3" name="optradio" value="Transferencia">Transferencia
+                    </label>
+                </div>
+                <div class="d-flex justify-content-around my-3">
+                    <button id="btnVolver1" type="reset" class="btn btn-outline-danger px-2">Volver Atrás</button>
+                    <button id="botonContinuar2" type="button" class="btn btn-outline-warning px-2">Continuar Pedido</button>
+                </div>
+            </form>
+            <form id="formDetalle">
                 <h2 id="tituloDetalle" class="text-center my-3">Detalle del Pedido</h2>
-                <form id="formDetalle">
-                    <ul id="formDetalleLista">
+                <ul id="formDetalleLista">
 
-                    </ul>
-                </form>
-            </div>
+                </ul>
+                <div class="d-flex justify-content-around my-3">
+                    <button id="btnVolver2" type="reset" class="btn btn-outline-danger px-2">Volver Atrás</button>
+                    <button id="botonFinalizar" type="button" class="btn btn-outline-warning px-2">Finalizar Pedido</button>
+                </div>
+            </form>
+            <div id="btnListaDePrecios">Lista de Precios</div>
         </div>
         <div id="cajaImgSandwich" class="col-xl-6 col-lg-6 col-md-11 col-sl-11 m-3 d-flex justify-content-center">
             
         </div>
+        
     </div>
 
 </body>
 <script src="js/popup.js"></script>
 <script src="js/AJAX.js"></script>
+<script src="js/progress.js"></script>
 <script src="js/objetos.js"></script>
 <script src="js/pan.js"></script>
 <script src="js/proteina.js"></script>

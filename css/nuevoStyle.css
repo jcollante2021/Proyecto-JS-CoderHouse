@@ -196,10 +196,7 @@ body{
     margin-top: 130px;
 }
 
-#divSeleccionIngredientes{
-    background-color: #66006e;
-    border-radius: 25px;
-}
+
 
 #cajaImgSandwich{
     background-image: url(../img/fondo_madera.jpg);
@@ -228,21 +225,88 @@ body{
     position: absolute;
 }
 
+.pasosFila{
+    width: 501px;
+    height: 40px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 -1px 5px -1px #000;
+    position: relative;
+}
 
+.pasosColumna{
+    width: 167px;
+    text-align: center;
+    color: #66006e;
+    position: relative;
+}
 
+#progress{
+    position: absolute;
+    height: 100%;
+    width: 167px;
+    background-color: #fec400;
+}
+
+#progress::after{
+    content: '';
+    height: 0;
+    width: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    right: -20px;
+    top: 0;
+    border-left: 20px solid #fec400;
+}
+
+#divSeleccionIngredientes{
+    background-color: #66006e;
+    border-radius: 0 0 25px 25px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+}
 
 #divDetalledePedido{
     text-align: center;
     visibility: hidden;
 }
 
-#tituloDetalle, #tituloPedido{
+#formPedido{
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    transition: 0.5s;
+}
+
+#formDatosPersonales{
+    text-align: center;
+    width: 500px;
+    position: absolute;
+    top: 0;
+    left: 700px;
+    transition: 0.5s;
+}
+
+#formDetalle{
+    text-align: center;
+    width: 500px;
+    position: absolute;
+    top: 0;
+    left: 700px;
+    transition: 0.5s;
+}
+
+#tituloDetalle, #tituloPedido, #tituloDatosPersonales{
     color: #fe8500;
     font-family: "subway", serif;
     font-size: 40pt;
 }
 
-#formDetalle, #formPedido{
+#formDetalle, #formPedido, #formDatosPersonales{
     margin: 30px 0 30px 0;
     color: #fec400;
     font-size: 16pt;
@@ -270,6 +334,24 @@ li{
 }
 
 /* ANIMACIONES */
+
+#tituloFinal, #tituloFinalSaludo{
+    animation-name: saludoFinal;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s; 
+}
+
+@keyframes saludoFinal {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+
+    } 
+}
 
 #cajaImgSandwich img{
     animation-name: animaIngredientes;
