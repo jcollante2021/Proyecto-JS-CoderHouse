@@ -2,6 +2,7 @@ $("#inputPan").change(agregarPan)
 
 function agregarPan(){
     pan = $("#inputPan").val();
+    //Toma el Valor del Input y segun el tipo de pan muestra el IMG y lo agrega al ARRAY de Ingredientes//
     switch(pan){
         case "blanco": 
             panBlanco.agregarPrecio();

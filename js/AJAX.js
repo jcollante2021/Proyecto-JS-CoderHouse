@@ -1,5 +1,5 @@
 $(document).ready(traerDatosJSON)
-
+//EL AJAX SE GENERA AL CARGAR LA PAGINA//
 function traerDatosJSON(){
     /* $.ajax({
         method: "GET",
@@ -8,6 +8,8 @@ function traerDatosJSON(){
             $("#datosListadePrecios").append(`<div class="btnPrecios"><p>${res.nombre} [ $${res.precio} ]</p></div>`)
         }
     }) */
+
+    //TOMA LOS OBJETOS DEL JSON CON EL NOMBRE Y PRECIO Y LOS MUESTRA EN EL DOM COMO LISTA DE PRECIOS//
     $.getJSON("../data/data.json", function (res, status){
         if(status === "success"){
             let misDatos = res;
@@ -17,6 +19,8 @@ function traerDatosJSON(){
         }
     })
 }
+
+//BOTONES PARA ENTRAR Y SALIR DE LA LSITA DE PRECIOS//
 
 $("#btnListaDePrecios").click(() => {$("#overlayPrecios").css("visibility", "visible")})
 

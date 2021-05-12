@@ -3,6 +3,7 @@ proteina = "Vegetales";
 
 function agregarProteina(){
     proteina = $("#inputProteina").val();
+    //Toma el Valor del Input y segun el tipo de Proteina muestra el IMG y lo agrega al ARRAY de Ingredientes//
     switch(proteina){
         case "carne": 
             carne.agregarPrecio();

@@ -1,5 +1,7 @@
 $("#btnBorrarPedido").click(reiniciarPedido)
 
+
+//Reinicia los valores a 0 de todos los ARRAY, las caracteristicas del CSS y eliminar todos los IMG//
 function reiniciarPedido(){
         $("#cajaImgSandwich").empty()
         $("#divVegetalesSeleccionados").empty()

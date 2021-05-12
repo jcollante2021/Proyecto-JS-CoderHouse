@@ -6,6 +6,7 @@ zIndex = 2
 
 function agregarVegetales(){
     vegetales = $("#inputVegetales").val();
+    //Toma el Valor del Input y segun el tipo de Vegetal muestra el IMG y lo agrega al ARRAY de Ingredientes//
     if (arrayVegetales.length < 3){
         switch(vegetales){
             case "lechuga": 
@@ -61,7 +62,7 @@ function agregarVegetales(){
     else {
         alert("USTED YA HA SELECCIONADO 3 VEGETALES")
     }
-
+  //creo evento al clickear el boton creado para elimnar el vegetal en el ARRAY y en el IMG//
     $("#eliminarLechuga").click( (e) => {
         e.preventDefault();
         $("#eliminarLechuga").remove()
@@ -104,6 +105,7 @@ function agregarVegetales(){
         eliminarIngredientesDelArray(arrayIngredientes, "Pepinillos ($" + pepinillos.precio + ")")
     })
     
+    //Funcion para buscar en el Array de Vegetales y eliminarlo del ARRAY//
     function eliminarIngredientesDelArray( arr , item){
         var i = arr.indexOf(item)
         if ( i !== -1) {
@@ -112,7 +114,7 @@ function agregarVegetales(){
     }
 }
 
-
+//Toma el evento del boton del Queso, muestra el IMG y lo agrega al ARRAY de Ingredientes//
 
 $("#btnAgregarQueso").click(agregarQueso);
 
@@ -123,6 +125,8 @@ function agregarQueso(){
     $("#imgQueso").css("z-index", `${calcular_Z_Index()}`)
     $("#imgQueso").css("bottom" , `${calcular_bottom_css()}px`)
 }
+
+//Funciones para obetener el Zindex y la altura del Bottom para las IMG//
 
 function calcular_Z_Index(){
     zIndex = (zIndex + 1);

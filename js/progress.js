@@ -1,3 +1,5 @@
+//AL DAR EL PRIMER CONTINUAR  COMPLETA EL IMG Y CIERRA LOS ARRAYS DEL TOTAL//
+
 $("#botonContinuar1").click( () => {
     $("#formPedido").css("left", "-700px")
     $("#formDatosPersonales").css("left", "15px")
@@ -9,6 +11,8 @@ $("#botonContinuar1").click( () => {
             $("#formDetalleLista").append(`<li> ${ingredientes} </li>`)
     }
 })
+
+//METODO PARA QUE CADA BOTON VAYA HACIA ATRAS Y ADELANTE//
 
 $("#btnVolver1").click(() => {
     $("#formPedido").css("left", "15px")
