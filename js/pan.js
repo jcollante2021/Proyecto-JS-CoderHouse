@@ -5,16 +5,19 @@ function agregarPan(){
     //Toma el Valor del Input y segun el tipo de pan muestra el IMG y lo agrega al ARRAY de Ingredientes//
     switch(pan){
         case "blanco": 
-            panBlanco.agregarPrecio();
+            arrayParaFacturarPan = []
+            arrayParaFacturarPan.push( panBlanco );
             arrayIngredientes.push("Pan Blanco ($" + panBlanco.precio + ")")
             $("#cajaImgSandwich").prepend(`<img id="imgPan" src="./img/panBlanco1.png">`);
             break;
         case "integral":
-            panIntegral.agregarPrecio();
+            arrayParaFacturarPan = []
+            arrayParaFacturarPan.push( panIntegral );
             arrayIngredientes.push("Pan Integral ($" + panIntegral.precio + ")")
             break;
         default:
-            panBlanco.agregarPrecio();
+            arrayParaFacturarPan = []
+            arrayParaFacturarPan.push( panBlanco );
             arrayIngredientes.push("Pan Blanco ($" + panBlanco.precio + ")")
             $("#cajaImgSandwich").prepend(`<img id="imgPan" src="./img/panBlanco1.png">`);
             break;

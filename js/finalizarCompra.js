@@ -9,6 +9,11 @@ function reiniciarPedido(){
         zIndex = 2
         arrayIngredientes = [];
         arrayVegetales = [];
+        arrayParaFacturar = [];
+        arrayParaFacturarPan = [];
+        arrayParaFacturarProteina = [];
+        arrayParaFacturarVegetales = [];
+        arrayParaFacturarQueso = [];
         precioTotal = 0;
 }
 
@@ -16,6 +21,10 @@ function reiniciarPedido(){
 $("#botonFinalizar").click(finalizarCompra);
 
 function finalizarCompra(){
+        facturar = arrayParaFacturar.concat(arrayParaFacturarPan, arrayParaFacturarProteina, arrayParaFacturarQueso, arrayParaFacturarVegetales)
+        for (const ingredientes of facturar) {
+                precioTotal = ingredientes.precio + precioTotal;
+        }
         $("#overlayTotal").css("visibility", "visible");
         $("#divTotal").append(`<strong><h3 id="tituloFinal">Total a abonar: $${precioTotal}</h3></strong><span id="tituloFinalSaludo">¡Esperamos que disfrutes tu CHAMBUCHITO de ${proteina} en pan ${pan}! <br> ¡VUELVA PRONTO! </span>`)
 }

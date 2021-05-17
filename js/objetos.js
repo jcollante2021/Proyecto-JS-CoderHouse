@@ -22,6 +22,11 @@ const zanahoria = new Producto("zanahoria", 15);
 const cebolla = new Producto("cebolla", 10);
 const pepinillos = new Producto("pepinillos", 20);
 arrayIngredientes = [];
+arrayParaFacturar = [];
+arrayParaFacturarPan = [];
+arrayParaFacturarProteina = [];
+arrayParaFacturarVegetales = [];
+arrayParaFacturarQueso = [];
 
 
 

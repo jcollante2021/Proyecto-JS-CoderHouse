@@ -10,16 +10,16 @@ function agregarVegetales(){
     if (arrayVegetales.length < 3){
         switch(vegetales){
             case "Lechuga": 
-                lechuga.agregarPrecio();
+                arrayParaFacturarVegetales.push(lechuga)
                 arrayIngredientes.push("Lechuga ($" + lechuga.precio + ")");
                 $("#cajaImgSandwich").prepend(`<img id="imgLechuga" src="./img/lechuga.png">`);
                 $("#imgLechuga").css("z-index", `${calcular_Z_Index()}`)
                 $("#imgLechuga").css("bottom" , `${calcular_bottom_css()}px`)
-                $("#divVegetalesSeleccionados").append(`<button id="eliminarLechuga" class="btn btn-warning mx-1 eliminarVegetal">Lechuga</button>`);
+                $("#divVegetalesSeleccionados").append(`<button id="eliminarLechuga" class="btn btn-warning mx-1 eliminarVegetal" value="Lechuga">Lechuga</button>`);
                 arrayVegetales.push(vegetales)
                 break;
             case "Tomate":
-                tomate.agregarPrecio();
+                arrayParaFacturarVegetales.push(tomate)
                 arrayIngredientes.push("Tomate ($" + tomate.precio + ")")
                 $("#cajaImgSandwich").prepend(`<img id="imgTomate" src="./img/tomate.png">`);
                 $("#imgTomate").css("z-index", `${calcular_Z_Index()}`)
@@ -28,7 +28,7 @@ function agregarVegetales(){
                 arrayVegetales.push(vegetales)
                 break;
             case "Zanahoria":
-                zanahoria.agregarPrecio();
+                arrayParaFacturarVegetales.push(zanahoria)
                 arrayIngredientes.push("Zanahoria ($" + zanahoria.precio + ")")
                 $("#cajaImgSandwich").prepend(`<img id="imgZanahoria" src="./img/zanahoria.png">`);
                 $("#imgZanahoria").css("z-index", `${calcular_Z_Index()}`)
@@ -37,7 +37,7 @@ function agregarVegetales(){
                 arrayVegetales.push(vegetales)
                 break;
             case "Cebolla":
-                cebolla.agregarPrecio();
+                arrayParaFacturarVegetales.push(cebolla)
                 arrayIngredientes.push("Cebolla ($" + cebolla.precio + ")")
                 $("#cajaImgSandwich").prepend(`<img id="imgCebolla" src="./img/cebolla.png">`);
                 $("#imgCebolla").css("z-index", `${calcular_Z_Index()}`)
@@ -46,7 +46,7 @@ function agregarVegetales(){
                 arrayVegetales.push(vegetales)
                 break;
             case "Pepinillos":
-                pepinillos.agregarPrecio();
+                arrayParaFacturarVegetales.push(pepinillos)
                 arrayIngredientes.push("Pepinillos ($" + pepinillos.precio + ")")
                 $("#cajaImgSandwich").prepend(`<img id="imgPepinillos" src="./img/pepinillos.png">`);
                 $("#imgPepinillos").css("z-index", `${calcular_Z_Index()}`)
@@ -63,72 +63,23 @@ function agregarVegetales(){
         alert("USTED YA HA SELECCIONADO 3 VEGETALES")
     }
 
+    //creo evento al clickear el boton creado para elimnar el vegetal en el ARRAY y en el IMG//
+    $("#divVegetalesSeleccionados").on('click', '.eliminarVegetal', function(e){
+        var vegetalSeleccionado = this; 
+        eliminarVegetalSeleccionado(e, vegetalSeleccionado)
+    })
 
-    /* $(".eliminarVegetal")[0].click( (e) => {
-        console.log(e.target)
-        e.target.preventDefault()
-        e.target.remove()
-        valor = e.target.val()
-        $(`#img${valor}`).remove()
+    function eliminarVegetalSeleccionado(e, seleccionado) {
+        e.preventDefault();
+        valor = seleccionado.textContent
+        valorParaFacturacion = seleccionado.textContent.toLowerCase()
+        seleccionado.remove();
+        $(`#img${valor}`).remove();
+        eliminarIngredientesDelArray(arrayParaFacturarVegetales, eval(valorParaFacturacion))
         eliminarIngredientesDelArray(arrayVegetales, valor)
-        eliminarIngredientesDelArray(arrayIngredientes, valor + " ($" + lechuga.precio + ")" )
-    })   */ 
+        eliminarIngredientesDelArray(arrayIngredientes, valor + " ($" + eval(valorParaFacturacion).precio +")" )
+    }
 
-
-    /* for (let index = 0; index < arrayVegetales.length; index++) {
-        $(".eliminarVegetal")[index].click( (e) => {
-            console.log(e.target)
-            e.preventDefault()
-            e.target.remove()
-            valor = e.target.val()
-            $(`#img${valor}`).remove()
-            eliminarIngredientesDelArray(arrayVegetales, valor)
-            eliminarIngredientesDelArray(arrayIngredientes, valor + " ($" + lechuga.precio + ")" )
-        })  
-    } */
-
-  //creo evento al clickear el boton creado para elimnar el vegetal en el ARRAY y en el IMG//
-    $("#eliminarLechuga").click( (e) => {
-        e.preventDefault();
-        $("#eliminarLechuga").remove()
-        $("#imgLechuga").remove()
-        eliminarIngredientesDelArray(arrayVegetales, 'Lechuga')
-        eliminarIngredientesDelArray(arrayIngredientes, "Lechuga ($" + lechuga.precio + ")" )
-    })
-
-    
-    $("#eliminarTomate").click( (e) => {
-        e.preventDefault();
-        $("#eliminarTomate").remove()
-        $("#imgTomate").remove()
-        eliminarIngredientesDelArray(arrayVegetales, 'Tomate')
-        eliminarIngredientesDelArray(arrayIngredientes, "Tomate ($" + tomate.precio + ")")
-    })
-    
-    $("#eliminarZanahoria").click( (e) => {
-        e.preventDefault();
-        $("#eliminarZanahoria").remove()
-        $("#imgZanahoria").remove()
-        eliminarIngredientesDelArray(arrayVegetales, 'Zanahoria')
-        eliminarIngredientesDelArray(arrayIngredientes, "Zanahoria ($" + zanahoria.precio + ")" )
-    })
-    
-    $("#eliminarCebolla").click( (e) => {
-        e.preventDefault();
-        $("#eliminarCebolla").remove()
-        $("#imgCebolla").remove()
-        eliminarIngredientesDelArray(arrayVegetales, 'Cebolla')
-        eliminarIngredientesDelArray(arrayIngredientes, "Cebolla ($" + cebolla.precio + ")" )
-        
-    })
-    
-    $("#eliminarPepinillos").click( (e) => {
-        e.preventDefault();
-        $("#eliminarPepinillos").remove()
-        $("#imgPepinillos").remove()
-        eliminarIngredientesDelArray(arrayVegetales, 'Pepinillos')
-        eliminarIngredientesDelArray(arrayIngredientes, "Pepinillos ($" + pepinillos.precio + ")")
-    })
     
     //Funcion para buscar en el Array de Vegetales y eliminarlo del ARRAY//
     function eliminarIngredientesDelArray( arr , item){
@@ -144,14 +95,20 @@ function agregarVegetales(){
 $("#btnAgregarQueso").click(agregarQueso);
 
 function agregarQueso(){
-    queso.agregarPrecio();
-    arrayIngredientes.push("Queso cheddar ($" + queso.precio + ")")
-    $("#cajaImgSandwich").prepend(`<img id="imgQueso" src="./img/queso.png">`);
-    $("#imgQueso").css("z-index", `${calcular_Z_Index()}`)
-    $("#imgQueso").css("bottom" , `${calcular_bottom_css()}px`)
+    if (arrayParaFacturarQueso.length != 0){
+        alert("SOLO PUEDE SELECCIONAR QUESO UNA VEZ")
+    }
+    else{
+        arrayParaFacturarQueso.push(queso)
+        arrayIngredientes.push("Queso cheddar ($" + queso.precio + ")")
+        $("#cajaImgSandwich").prepend(`<img id="imgQueso" src="./img/queso.png">`);
+        $("#imgQueso").css("z-index", `${calcular_Z_Index()}`)
+        $("#imgQueso").css("bottom" , `${calcular_bottom_css()}px`)
+    }
+    
 }
 
-//Funciones para obetener el Zindex y la altura del Bottom para las IMG//
+//Funciones para obetener el Z-index y la altura del Bottom para las IMG//
 
 function calcular_Z_Index(){
     zIndex = (zIndex + 1);
