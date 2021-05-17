@@ -161,6 +161,66 @@ body{
     background-color: rgba(0, 128, 128, 0.726);
     cursor: pointer;
 }
+
+#overlayTotal{
+    z-index: 16;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+}
+
+#divTotalOverlay{
+    margin-top: 100px;
+    border-radius: 20px;
+    text-align: center;
+    width: 600px;
+    height: 350px;
+    background-color: #66006e;
+    padding: 20px;
+    top: 400px;
+}
+
+#divTotal h2{
+    color: #fec400;
+    font-family: "subway", serif;
+    font-size: 40pt;
+}
+
+#estiloParaBotonRecargar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#btnRecargar{
+    padding: 8px;
+    width: 80%;
+    margin: 10px;
+    background-color: #009201;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 16pt;
+}
+#btnRecargar:hover{
+    background-color: #009200c2;
+    cursor: pointer;
+}
+
+#tituloFinal{
+    color: #fe8500;
+    font-size: 25pt;
+}
+
+#tituloFinalSaludo{
+    color: #fec400;
+    font-size: 18pt;
+    font-style: italic;
+}
 /* ///////////////////////////// */
 
 .btnAgregarQueso{

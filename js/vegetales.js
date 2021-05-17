@@ -9,7 +9,7 @@ function agregarVegetales(){
     //Toma el Valor del Input y segun el tipo de Vegetal muestra el IMG y lo agrega al ARRAY de Ingredientes//
     if (arrayVegetales.length < 3){
         switch(vegetales){
-            case "lechuga": 
+            case "Lechuga": 
                 lechuga.agregarPrecio();
                 arrayIngredientes.push("Lechuga ($" + lechuga.precio + ")");
                 $("#cajaImgSandwich").prepend(`<img id="imgLechuga" src="./img/lechuga.png">`);
@@ -18,40 +18,40 @@ function agregarVegetales(){
                 $("#divVegetalesSeleccionados").append(`<button id="eliminarLechuga" class="btn btn-warning mx-1 eliminarVegetal">Lechuga</button>`);
                 arrayVegetales.push(vegetales)
                 break;
-            case "tomate":
+            case "Tomate":
                 tomate.agregarPrecio();
                 arrayIngredientes.push("Tomate ($" + tomate.precio + ")")
                 $("#cajaImgSandwich").prepend(`<img id="imgTomate" src="./img/tomate.png">`);
                 $("#imgTomate").css("z-index", `${calcular_Z_Index()}`)
                 $("#imgTomate").css("bottom" , `${calcular_bottom_css()}px`)
-                $("#divVegetalesSeleccionados").append(`<button id="eliminarTomate" class="btn btn-warning mx-1 eliminarVegetal">Tomate</button>`);
+                $("#divVegetalesSeleccionados").append(`<button id="eliminarTomate" class="btn btn-warning mx-1 eliminarVegetal" value="Tomate">Tomate</button>`);
                 arrayVegetales.push(vegetales)
                 break;
-            case "zanahoria":
+            case "Zanahoria":
                 zanahoria.agregarPrecio();
                 arrayIngredientes.push("Zanahoria ($" + zanahoria.precio + ")")
                 $("#cajaImgSandwich").prepend(`<img id="imgZanahoria" src="./img/zanahoria.png">`);
                 $("#imgZanahoria").css("z-index", `${calcular_Z_Index()}`)
                 $("#imgZanahoria").css("bottom" , `${calcular_bottom_css()}px`)
-                $("#divVegetalesSeleccionados").append(`<button id="eliminarZanahoria" class="btn btn-warning mx-1 eliminarVegetal">Zanahoria</button>`);
+                $("#divVegetalesSeleccionados").append(`<button id="eliminarZanahoria" class="btn btn-warning mx-1 eliminarVegetal" value="Zanahoria">Zanahoria</button>`);
                 arrayVegetales.push(vegetales)
                 break;
-            case "cebolla":
+            case "Cebolla":
                 cebolla.agregarPrecio();
                 arrayIngredientes.push("Cebolla ($" + cebolla.precio + ")")
                 $("#cajaImgSandwich").prepend(`<img id="imgCebolla" src="./img/cebolla.png">`);
                 $("#imgCebolla").css("z-index", `${calcular_Z_Index()}`)
                 $("#imgCebolla").css("bottom" , `${calcular_bottom_css()}px`)
-                $("#divVegetalesSeleccionados").append(`<button id="eliminarCebolla" class="btn btn-warning mx-1 eliminarVegetal">Cebolla</button>`);
+                $("#divVegetalesSeleccionados").append(`<button id="eliminarCebolla" class="btn btn-warning mx-1 eliminarVegetal" value="Cebolla">Cebolla</button>`);
                 arrayVegetales.push(vegetales)
                 break;
-            case "pepinillos":
+            case "Pepinillos":
                 pepinillos.agregarPrecio();
                 arrayIngredientes.push("Pepinillos ($" + pepinillos.precio + ")")
                 $("#cajaImgSandwich").prepend(`<img id="imgPepinillos" src="./img/pepinillos.png">`);
                 $("#imgPepinillos").css("z-index", `${calcular_Z_Index()}`)
                 $("#imgPepinillos").css("bottom" , `${calcular_bottom_css()}px`)
-                $("#divVegetalesSeleccionados").append(`<button id="eliminarPepinillos" class="btn btn-warning mx-1 eliminarVegetal">Pepinillos</button>`);
+                $("#divVegetalesSeleccionados").append(`<button id="eliminarPepinillos" class="btn btn-warning mx-1 eliminarVegetal" value="Pepinillos">Pepinillos</button>`);
                 arrayVegetales.push(vegetales)
                 break;
             default:
@@ -62,12 +62,37 @@ function agregarVegetales(){
     else {
         alert("USTED YA HA SELECCIONADO 3 VEGETALES")
     }
+
+
+    /* $(".eliminarVegetal")[0].click( (e) => {
+        console.log(e.target)
+        e.target.preventDefault()
+        e.target.remove()
+        valor = e.target.val()
+        $(`#img${valor}`).remove()
+        eliminarIngredientesDelArray(arrayVegetales, valor)
+        eliminarIngredientesDelArray(arrayIngredientes, valor + " ($" + lechuga.precio + ")" )
+    })   */ 
+
+
+    /* for (let index = 0; index < arrayVegetales.length; index++) {
+        $(".eliminarVegetal")[index].click( (e) => {
+            console.log(e.target)
+            e.preventDefault()
+            e.target.remove()
+            valor = e.target.val()
+            $(`#img${valor}`).remove()
+            eliminarIngredientesDelArray(arrayVegetales, valor)
+            eliminarIngredientesDelArray(arrayIngredientes, valor + " ($" + lechuga.precio + ")" )
+        })  
+    } */
+
   //creo evento al clickear el boton creado para elimnar el vegetal en el ARRAY y en el IMG//
     $("#eliminarLechuga").click( (e) => {
         e.preventDefault();
         $("#eliminarLechuga").remove()
         $("#imgLechuga").remove()
-        eliminarIngredientesDelArray(arrayVegetales, 'lechuga')
+        eliminarIngredientesDelArray(arrayVegetales, 'Lechuga')
         eliminarIngredientesDelArray(arrayIngredientes, "Lechuga ($" + lechuga.precio + ")" )
     })
 
@@ -76,7 +101,7 @@ function agregarVegetales(){
         e.preventDefault();
         $("#eliminarTomate").remove()
         $("#imgTomate").remove()
-        eliminarIngredientesDelArray(arrayVegetales, 'tomate')
+        eliminarIngredientesDelArray(arrayVegetales, 'Tomate')
         eliminarIngredientesDelArray(arrayIngredientes, "Tomate ($" + tomate.precio + ")")
     })
     
@@ -84,7 +109,7 @@ function agregarVegetales(){
         e.preventDefault();
         $("#eliminarZanahoria").remove()
         $("#imgZanahoria").remove()
-        eliminarIngredientesDelArray(arrayVegetales, 'zanahoria')
+        eliminarIngredientesDelArray(arrayVegetales, 'Zanahoria')
         eliminarIngredientesDelArray(arrayIngredientes, "Zanahoria ($" + zanahoria.precio + ")" )
     })
     
@@ -92,7 +117,7 @@ function agregarVegetales(){
         e.preventDefault();
         $("#eliminarCebolla").remove()
         $("#imgCebolla").remove()
-        eliminarIngredientesDelArray(arrayVegetales, 'cebolla')
+        eliminarIngredientesDelArray(arrayVegetales, 'Cebolla')
         eliminarIngredientesDelArray(arrayIngredientes, "Cebolla ($" + cebolla.precio + ")" )
         
     })
@@ -101,7 +126,7 @@ function agregarVegetales(){
         e.preventDefault();
         $("#eliminarPepinillos").remove()
         $("#imgPepinillos").remove()
-        eliminarIngredientesDelArray(arrayVegetales, 'pepinillos')
+        eliminarIngredientesDelArray(arrayVegetales, 'Pepinillos')
         eliminarIngredientesDelArray(arrayIngredientes, "Pepinillos ($" + pepinillos.precio + ")")
     })
     
