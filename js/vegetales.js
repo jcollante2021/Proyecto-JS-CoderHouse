@@ -1,6 +1,8 @@
+//Se creó este Array vacio para hacer que los vegetales no supéren la cantidad de 3 por Pedido//
 arrayVegetales = [];
 
 $("#botonAgregarVegetales").click(agregarVegetales);
+//Declaro el valor que inicial que quiero que tengan los elemetos en el CSS
 cssTopVegetales = 70
 zIndex = 2
 
@@ -9,6 +11,7 @@ function agregarVegetales(){
     //Toma el Valor del Input y segun el tipo de Vegetal muestra el IMG y lo agrega al ARRAY de Ingredientes//
     if (arrayVegetales.length < 3){
         switch(vegetales){
+            //cada CASE pushea la informacion a los ARRAYs y crea la IMG en el DOM//
             case "Lechuga": 
                 arrayParaFacturarVegetales.push(lechuga)
                 arrayIngredientes.push("Lechuga ($" + lechuga.precio + ")");
@@ -68,7 +71,7 @@ function agregarVegetales(){
         var vegetalSeleccionado = this; 
         eliminarVegetalSeleccionado(e, vegetalSeleccionado)
     })
-
+    //Esta funcion luego de ser llamada por el evento del boton creado, removera el vegetal de todos los ARRAYs y el IMG del DOM que corresponda//
     function eliminarVegetalSeleccionado(e, seleccionado) {
         e.preventDefault();
         valor = seleccionado.textContent
