@@ -1,14 +1,6 @@
 $(document).ready(traerDatosJSON)
 //EL AJAX SE GENERA AL CARGAR LA PAGINA//
 function traerDatosJSON(){
-    /* $.ajax({
-        method: "GET",
-        url: URLJSON,
-        success: function (res){
-            $("#datosListadePrecios").append(`<div class="btnPrecios"><p>${res.nombre} [ $${res.precio} ]</p></div>`)
-        }
-    }) */
-
     //TOMA LOS OBJETOS DEL JSON CON EL NOMBRE Y PRECIO Y LOS MUESTRA EN EL DOM COMO LISTA DE PRECIOS//
     $.getJSON("../data/data.json", function (res, status){
         if(status === "success"){
